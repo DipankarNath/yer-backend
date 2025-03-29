@@ -94,6 +94,8 @@ console.log(userDetails)
       res.status(200).json({
         message: "Login successful",
         user: userDetails,
+        token,
+        refreshToken
         // token,
       });
     } catch (error) {
