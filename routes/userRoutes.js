@@ -52,7 +52,7 @@ router.post("/register", async (req, res) => {
       )
       VALUES (?, ?, ?, ?, ?, ?, ?, ?)
     `;
-    const values = [roleId, name, phone, email, password_hash, genderValue, dob, activeStatus, 3];
+    const values = [name, phone, email, password_hash, genderValue, dob, activeStatus, 3];
 
     // Execute the query
     const [result] = await pool.query(query, values);
