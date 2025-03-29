@@ -41,7 +41,6 @@ router.post("/register", async (req, res) => {
     // SQL query to insert a new user (patient)
     const query = `
       INSERT INTO users (
-        roleId,
         name,
         phone,
         email,
@@ -51,7 +50,7 @@ router.post("/register", async (req, res) => {
         activeStatus,
         roleId
       )
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?)
     `;
     const values = [roleId, name, phone, email, password_hash, genderValue, dob, activeStatus, 3];
 

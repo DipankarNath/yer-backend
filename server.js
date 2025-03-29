@@ -52,11 +52,12 @@ pool.getConnection()
     console.error('Database connection failed:', err.stack);
   });
 
-// Basic route
-app.use('/api', authRoutes);
-app.use('/api/user', userRoutes); 
+
+
 
 app.use(authenticateToken); // Apply the authentication middleware globally
+app.use('/api', authRoutes);
+app.use('/api/user', userRoutes); 
 // app.use(appendUserToResponse);
 
 //app.use('/api/dashboard', dashboardRoutes);
